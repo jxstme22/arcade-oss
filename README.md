@@ -96,6 +96,15 @@ Console/once modes never load Telegram credentials. The board is read-only:
 it parses ledgers + sqlite mirrors and writes nothing (except telegram-mode
 dedup state). See `docs/OPERATIONS.md`.
 
+> **Note — notifier reliability.** The Telegram notifier path (rich
+> tables, event fan-out, multi-chat delivery, dedup state) is the least
+> battle-tested part of this package: expect missed or duplicated alerts on
+> flaky networks, stale dedup state after unclean kills, and formatting
+> quirks on some clients. Treat the board as a convenience display, never as
+> the source of truth — ledgers + sqlite mirrors are. Console/`--once` mode
+> is the reliable path; Telegram mode is best-effort until hardened. Bugs
+> welcome as issues with the `notify` label and the relevant log lines.
+
 ## Going live (checklist, not a button)
 
 1. Read `docs/GOING_LIVE.md` end to end.
