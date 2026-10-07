@@ -11,9 +11,12 @@
     "@probz/jupiter": "file:../packages/jupiter"
   },
   "scripts": {
-    "test": "node --test test/engine.test.mjs",
+    "test": "node --test test/engine.test.mjs test/live-inert.test.mjs",
     "doctor": "node scripts/doctor.mjs",
     "paper": "node paper/agree-runner.mjs",
-    "board": "node notify/board.mjs"
+    "settle": "node paper/settle.mjs",
+    "board": "node notify/board.mjs",
+    "live": "node live/aagree.mjs",
+    "audit": "sh scripts/audit-guardrails.sh && sh scripts/check-no-signer.sh && sh scripts/check-no-hardcoded-paths.sh"
   }
 }
