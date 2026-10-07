@@ -1,0 +1,40 @@
+{
+  "clocks": {
+    "decisionLeadS": 6,
+    "refBackS": 60,
+    "betCutoffS": 3,
+    "maxSourceAgeMs": 10000
+  },
+  "tiers": [
+    { "belowMicro": 10000000, "stakeMicro": 1000000 },
+    { "belowMicro": 20000000, "stakeMicro": 2000000 },
+    { "belowMicro": 30000000, "stakeMicro": 3000000 },
+    { "belowMicro": 100000000, "stakeMicro": 5000000 },
+    { "belowMicro": "Inf", "stakeMicro": 7500000 }
+  ],
+  "jev": {
+    "model": "jev-1.13.0",
+    "convictUp": 0.7,
+    "convictDown": 0.3,
+    "routerStrong": 0.2,
+    "trailCalmMax": 0.000147,
+    "jevWeakMax": 0.1,
+    "gVoteMin": 5,
+    "timeoutMs": 20000,
+    "deadlineMs": 25000,
+    "frozen": true
+  },
+  "breaker": {
+    "windowN": 20,
+    "haltBelow": 0.48
+  },
+  "settlement": {
+    "grossMult": 1.99,
+    "feeBps": 100
+  },
+  "paper": {
+    "stakeMicro": 3000000,
+    "bankrollStartMicro": 50000000,
+    "onlyDefault": ["agree-jev-a", "agree-i-pure"]
+  }
+}

@@ -1,0 +1,10 @@
+# Live kill-switch config. Copy to config/live.conf to arm the gate file.
+# SHIPPED INERT: TRADING=0 + DRY_RUN=1 means live loops can only dry_build.
+# To go live BOTH conditions must hold: TRADING=1 AND DRY_RUN=0 (plus KILL=0).
+# Never set TRADING=1 / DRY_RUN=0 in this repo. See docs/GOING_LIVE.md.
+ARCADE_LIVE_TRADING=0
+ARCADE_LIVE_DRY_RUN=1
+ARCADE_LIVE_KILL=0
+ARCADE_LIVE_STAKE_MICRO=3000000
+ARCADE_LIVE_MAX_AMOUNT_MICRO=7500000
+ARCADE_LIVE_MIN_BALANCE_MICRO=2000000

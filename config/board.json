@@ -1,0 +1,7 @@
+{
+  "pollMs": 1000,
+  "digestEveryMs": 900000,
+  "timezone": "Asia/Jakarta",
+  "stateFile": "board-state.json",
+  "mode": "console"
+}
