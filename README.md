@@ -15,7 +15,9 @@ node notify/board.mjs --once
 ```
 
 1. `cp .env.example .env` — local config (gitignored, stays empty of secrets).
-2. `npm install` — installs the two runtime deps.
+2. `npm install` — installs the two runtime deps (`@probz/jupiter`,
+   `@probz/jev` resolve via the monorepo; check out the full repo, not this
+   directory alone, or `npm install` has nothing to link against).
 3. `node scripts/doctor.mjs` — node >= 22? data dir writable? feeds reachable?
    Offline degrades to warnings, never a hard fail.
 4. `node paper/agree-runner.mjs --once --dry-run` — one paper evaluation,
