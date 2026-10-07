@@ -1,0 +1,19 @@
+{
+  "name": "arcade-oss",
+  "version": "0.1.0",
+  "description": "Standalone open-source Arcade 60s prediction paper-trading package (inert live loops, paper-first).",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@probz/jev": "file:../packages/jev",
+    "@probz/jupiter": "file:../packages/jupiter"
+  },
+  "scripts": {
+    "test": "node --test test/engine.test.mjs",
+    "doctor": "node scripts/doctor.mjs",
+    "paper": "node paper/agree-runner.mjs",
+    "board": "node notify/board.mjs"
+  }
+}
